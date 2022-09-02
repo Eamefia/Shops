@@ -1,14 +1,19 @@
-import React from 'react';
+import { React } from 'react';
+import "./Product_details.css";
+import { useLocation } from "react-router-dom";
 
 function Product_details() {
+  const location = useLocation();
+  const {name} = location.state;
+  const {pic} = location.state;
     return (
-        <div className='product__details'>
+        <div className='product__details ps-5 py-5'>
             <div className='row product__details__all'>
               <div className='col-4 product__details__images'>
-                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJzOGknOR1okEfXvblEOK1tnysFBk2pzHWsA&usqp=CAU" />
+                 <img src={pic}/>
               </div>
               <div className='col-4 mt-5 product__details__specs'>
-                <strong>Apple iPhone 12 Pro, 128GB, Pacific Blue - Fully Unlocked</strong>
+                <strong>{name}, 128GB, Pacific Blue - Fully Unlocked</strong>
                 <p><a href='#'>Visist Amazon Renewed Store</a></p>
                 <div className='d-flex'>
                 <p>⭐⭐⭐⭐</p>
@@ -108,8 +113,37 @@ function Product_details() {
                    </div>
                 </div>
               </div>
-              <div className='col-4 product__details__purchase'>
-                 
+              <div className='col-4 product__details__purchase ps-2'>
+                 <div className="price__column pt-4 px-3">
+                    <strong className="danger"><span className="danger">$</span>1000 </strong>
+                    <p className="pt-2 pb-4">$56.81 Shipping & Import Fees Deposit to Ghana Details </p>
+                    <p>Delivery <strong>January 19 - 26</strong></p>
+                    <strong className="danger pt-3">In Stock</strong> <br></br>
+                    <button className="btn-warning mt-4 add__cat">Add to cat</button>
+                    <button className="btn-success mt-2 add__cat">Buy now</button>
+                    <p>Secure transaction</p>
+                    <small>Ships from  Amazon.com</small> <br></br>
+                    <small>Sold by  Amazon.com</small>
+                    <p>Return policy: Eligible for Return, Refund or Replacement</p>
+                    <p>Support: Free Amazon product support included </p>
+                    <strong>Add other items:</strong>
+                    <div className="d-flex justify-content-between">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Iphone pro Max 130 minuits/ 90 days warranty
+                      </label>
+                    </div>
+                    <strong className="danger"><span className="danger">$</span>920 </strong>
+                    </div>
+                    <div class="form-check py-4">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                      <label class="form-check-label" for="flexCheckChecked">
+                         Add a gift receipt for easy returns
+                      </label>
+                    </div>
+                    <button className="addlist">Add to List</button>
+                 </div>
               </div>
             </div>
         </div>

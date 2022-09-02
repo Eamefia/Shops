@@ -1,8 +1,4 @@
-.product{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+.product{  
     width: 100%;
     padding: 20px;
     max-height: 400px;
@@ -10,6 +6,13 @@
     margin: 10px;
     background-color: white;
     z-index: 1;
+}
+
+.product__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .product__info{
@@ -24,16 +27,19 @@
    display: flex;
 }
 
-.product > img {
+.img {
     max-height: 200px;
-    width: 100%;
+    max-width: 200px;
     object-fit: contain;
     margin-bottom: 15px;
  }
 
- .product > button {
+ .addbasket{
+     width: 200px;
+     height: 30px;
      background-color: #f0c14b;
-     border: 1px solid;
-     border-color: #a88734 #9c7e31 #846a29;
+     margin-left: 5px;
+     border: none;
+     border-radius: 15px;
  }
 
